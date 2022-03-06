@@ -7,5 +7,7 @@ jobs:
   run-script:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out the source code to get the shell scripts
+        uses: actions/checkout@v3
       - name: Check hubelbauer.net DNS AAAA records
         run: .github/workflows/dns-aaaa-records.sh
