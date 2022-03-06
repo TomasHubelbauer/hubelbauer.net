@@ -1,0 +1,11 @@
+name: dns-cname-records
+on:
+  push:
+  schedule:
+    - cron: '0 * * * *'
+jobs:
+  check-dns:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check www.hubelbauer.net DNS CNAME record
+        run: ./dns-cname-record.sh

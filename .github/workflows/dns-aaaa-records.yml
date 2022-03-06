@@ -7,5 +7,5 @@ jobs:
   check-dns:
     runs-on: ubuntu-latest
     steps:
-      - name: Print hubelbauer.net DNS AAAA records
-        run: dig hubelbauer.net +noall +answer -t AAAA | grep "^hubelbauer.net"
+      - name: Check hubelbauer.net DNS AAAA records
+        run: ./dns-aaaa-records.sh
