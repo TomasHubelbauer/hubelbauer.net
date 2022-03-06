@@ -36,6 +36,11 @@ I think this might be a caching issue with the browser or perhaps GitHub having
 not refreshed the certificate to account for the subdomain yet? I need to test
 this later or on a separate computer.
 
-Maybe I just need to toggle Enforce HTTPS on and off so it noties the new DNS
-entry for the WWW subdomain CNAME. I might do that, but I don't want to mess up
-the apex domain SSL, so I will think about it.
+I went to the GitHub Pages settings page and it noticed the custom domain setup
+has changed and provisioned a new certificate. It will take some time to fully
+propagate, so I will check on this later.
+
+After this is rolled out, I might need to update the pattern in the HTTPS SSL
+workflow file. Also, this will likely break/fix the WWW to apex redirect I am
+seeing that I made the other task about. I will handle that depending on what
+happens.
