@@ -1,12 +1,19 @@
 # [Hubelbauer.net](https://hubelbauer.net)
 
+![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/dns-a-records/badge.svg)
+![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/dns-aaaa-records/badge.svg)
+![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/dns-cname-records/badge.svg)
+![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/http-html-document/badge.svg)
+![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/https-ssl-certificates/badge.svg)
+
 This repository hosts my personal website.
 
 ## Pipelines
 
-This repository has a few pipelines associated with it and they periodicaly
-check the GitHub Pages custom domain setup, including the for [apex] domain and
-the [www][www] subdomain, HTTP to HTTPS redirect and LE SSL certificate.
+This repository has a few pipelines associated with it (see the badges above)
+and they periodicaly check the GitHub Pages custom domain setup, including the
+for [apex] domain and the [www][www] subdomain, HTTP to HTTPS redirect and Let's
+Encrypt SSL certificate.
 
 [apex]: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain
 [www]: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain-and-the-www-subdomain-variant
