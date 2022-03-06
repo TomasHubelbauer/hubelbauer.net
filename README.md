@@ -23,24 +23,17 @@ Encrypt SSL certificate.
 
 ### Add a pipeline that checks for the WWW subdomain to apex domain redirect
 
-This redirect happens when I type `www.hubelbauer.net` into my browser. When
-typing `https://www.hubelbauer.net`, I get a certificate error for which I have
-created a different task.
+It seems that if both the WWW subdomain and the apex domain are set up, GitHub
+Pages sets up a redirect. It can be seen in `curl -v https://www.hubelbauer.net`
+where the `Location` response header points to the apex domain.
 
-It seems to redirect which might be an artifact of my browser caches and not the
-intended behavior? But if it is, let's add a pipeline for it.
+This is different from the HTTP to HTTPS redirect that also exists, because here
+the WWW URL is already HTTPS. I will need to introduce new pipelines to replace
+the current `http-html-document`:
 
-### Figure out why https://www.hubelbauer.net displays a certificate error
+- `www-apex-redirect` checks the `Location` header for `https://www.…`
+- `http-https-apex-redirect` checks the `Location` header for `http://…`
+- `http-https-www-redirect` checks the `Location` header for `http://www.…`
 
-I think this might be a caching issue with the browser or perhaps GitHub having
-not refreshed the certificate to account for the subdomain yet? I need to test
-this later or on a separate computer.
-
-I went to the GitHub Pages settings page and it noticed the custom domain setup
-has changed and provisioned a new certificate. It will take some time to fully
-propagate, so I will check on this later.
-
-After this is rolled out, I might need to update the pattern in the HTTPS SSL
-workflow file. Also, this will likely break/fix the WWW to apex redirect I am
-seeing that I made the other task about. I will handle that depending on what
-happens.
+I might drop the HTML comparison or I might keep it on top of to the `Location`
+response header check in the above three pipelines.
