@@ -8,13 +8,18 @@ This repository hosts my personal website.
 
 Make sure the A and AAAA records are applied correctly:
 
-- `dig EXAMPLE.COM +noall +answer -t A`
-- `dig EXAMPLE.COM +noall +answer -t AAAA`
+- `dig hubelbauer.net +noall +answer -t A`
+- `dig hubelbauer.net +noall +answer -t AAAA`
+- `dig www.hubelbauer.net +nostats +nocomments +nocmd`
 
-Responses should match this article:
+Responses should match these articles: [apex setup][apex], [www setup][www].
 
-https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain.
+Also monitor that HTTPS works in this pipeline and that HTTP redirects.
 
-### Configure WWW subdomain in addition to the apex domain on GitHub Pages
+[apex]: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain
+[www]: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain-and-the-www-subdomain-variant
 
-https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain-and-the-www-subdomain-variant
+### Wait for the DNS changes to go live and check that apex, WWW and HTTPS work
+
+Once this all works out, both the apex and subdomain variants should work and
+hopefully the HTTPS setup will remain intact.
