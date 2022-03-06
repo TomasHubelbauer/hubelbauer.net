@@ -1,4 +1,4 @@
-name: dns-cname-records
+name: dns-cname-record
 on:
   push:
   schedule:

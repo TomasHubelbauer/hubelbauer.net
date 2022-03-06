@@ -3,7 +3,7 @@
 ![](https://github.com/TomasHubelbauer/hubelbauer.net/actions/workflows/pages/pages-build-deployment/badge.svg)
 ![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/dns-a-records/badge.svg)
 ![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/dns-aaaa-records/badge.svg)
-![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/dns-cname-records/badge.svg)
+![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/dns-cname-record/badge.svg)
 ![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/http-html-document/badge.svg)
 ![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/https-ssl-certificates/badge.svg)
 
