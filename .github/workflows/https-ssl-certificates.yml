@@ -1,0 +1,11 @@
+name: https-ssl-certificates
+on:
+  push:
+  schedule:
+    - cron: '0 * * * *'
+jobs:
+  check-dns:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print hubelbauer.net:443 SSL certificates
+        run: echo | openssl s_client -showcerts -connect hubelbauer.net:443 | grep -v "^    "

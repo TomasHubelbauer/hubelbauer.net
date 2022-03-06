@@ -1,0 +1,11 @@
+name: http-html-document
+on:
+  push:
+  schedule:
+    - cron: '0 * * * *'
+jobs:
+  check-dns:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print hubelbauer.net:80 HTML document
+        run: curl hubelbauer.net

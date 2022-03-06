@@ -1,0 +1,11 @@
+name: dns-aaaa-records
+on:
+  push:
+  schedule:
+    - cron: '0 * * * *'
+jobs:
+  check-dns:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print hubelbauer.net DNS AAAA records
+        run: dig hubelbauer.net +noall +answer -t AAAA | grep "^hubelbauer.net"

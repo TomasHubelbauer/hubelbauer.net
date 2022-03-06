@@ -1,0 +1,11 @@
+name: dns-cname-records
+on:
+  push:
+  schedule:
+    - cron: '0 * * * *'
+jobs:
+  check-dns:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print www.hubelbauer.net DNS CNAME records
+        run: dig www.hubelbauer.net +noall +answer -t CNAME | grep "^www.hubelbauer.net"
