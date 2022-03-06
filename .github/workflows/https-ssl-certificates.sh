@@ -1,4 +1,8 @@
-# Note that this is different on the pipeline agent and on my own Mac
+# Note that the output of the command used here gives different results based on
+# whether it has run on the pipeline agent or my Mac, but it always gives the
+# same output on the same machine. I have used the pipeline agent output here as
+# that's where it needs to run correctly and I can always change it for local
+# debugging if need be.
 PATTERN="CONNECTED(00000003)
 ---
 Certificate chain
@@ -128,8 +132,7 @@ Post-Handshake New Session Ticket arrived:
 SSL-Session:
 
 ---
-read R BLOCK
-"
+read R BLOCK"
 
 # Send the echo into openssl s_client otherwise it will stall for user input
 # Remove SSL-Session section items as they vary across runs and are irrelevant
