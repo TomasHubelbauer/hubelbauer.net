@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check hubelbauer.net:80 HTML document
-        run: ./http-html-document.sh
+        run: .github/workflows/http-html-document.sh

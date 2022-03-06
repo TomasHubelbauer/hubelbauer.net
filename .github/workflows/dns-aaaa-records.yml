@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check hubelbauer.net DNS AAAA records
-        run: ./dns-aaaa-records.sh
+        run: .github/workflows/dns-aaaa-records.sh
