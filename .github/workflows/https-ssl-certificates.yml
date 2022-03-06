@@ -11,3 +11,15 @@ jobs:
         uses: actions/checkout@v3
       - name: Check hubelbauer.net:443 SSL certificates
         run: .github/workflows/https-ssl-certificates.sh
+      - name: Upload ouput artifact for debugging
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: output
+          path: output
+      - name: Upload pattern artifact for debugging
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: pattern
+          path: pattern
