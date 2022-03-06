@@ -1,0 +1,18 @@
+on:
+  push
+  schedule
+    - cron: 0 * * * *
+jobs:
+  check-dns:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print hubelbauer.net DNS A records
+        run: dig hubelbauer.net +noall +answer -t A | grep "^hubelbauer.net"
+      - name: Print hubelbauer.net DNS AAAA records
+        run: dig hubelbauer.net +noall +answer -t AAAA | grep "^hubelbauer.net"
+      - name: Print www.hubelbauer.net DNS CNAME records
+        run: dig www.hubelbauer.net +noall +answer -t CNAME | grep "^www.hubelbauer.net"
+      - name: Print hubelbauer.net:443 SSL certificates
+        run: echo | openssl s_client -showcerts -connect hubelbauer.net:443 | grep -v "^    "
+      - name: Print hubelbauer.net:80 HTML document
+        run: curl hubelbauer.net

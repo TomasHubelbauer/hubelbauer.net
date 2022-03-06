@@ -4,20 +4,17 @@ This repository hosts my personal website.
 
 ## To-Do
 
-### Add a GitHub Actions pipeline to monitor the GitHub Pages custom domain DNS
+### Update the GitHub Actions pipeline to monitor the custom domain DNS/HTTPS
 
-Make sure the A and AAAA records are applied correctly:
+Right now the commands only print their outputs and the pipeline can never fail.
 
-- `dig hubelbauer.net +noall +answer -t A`
-- `dig hubelbauer.net +noall +answer -t AAAA`
-- `dig www.hubelbauer.net +nostats +nocomments +nocmd`
-
-Responses should match these articles: [apex setup][apex], [www setup][www].
-
-Also monitor that HTTPS works in this pipeline and that HTTP redirects.
+Compare the command responses to hard-coded values and exit if they don't match.
+DNS values come from [apex domain][apex] and [subdomain][subdomain] GitHub docs.
+HTTPS certificate taken from a known good command output.
+HTTP document taken froma known good command output.
 
 [apex]: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain
-[www]: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain-and-the-www-subdomain-variant
+[subdomain]: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain-and-the-www-subdomain-variant
 
 ### Wait for the DNS changes to go live and check that apex, WWW and HTTPS work
 
