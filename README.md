@@ -5,27 +5,13 @@
 ![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/dns-aaaa-records/badge.svg)
 ![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/dns-cname-record/badge.svg)
 ![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/https-ssl-certificates/badge.svg)
+![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/http-https-redirect/badge.svg)
+![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/http-www-redirect/badge.svg)
+![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/https-www-redirect/badge.svg)
 
 This repository hosts my personal website.
 
 ## To-Do
-
-### Add a pipeline that checks for the WWW subdomain to apex domain redirect
-
-It seems that if both the WWW subdomain and the apex domain are set up, GitHub
-Pages sets up a redirect. It can be seen in `curl -v https://www.hubelbauer.net`
-where the `Location` response header points to the apex domain.
-
-This is different from the HTTP to HTTPS redirect that also exists, because here
-the WWW URL is already HTTPS. I will need to introduce new pipelines to replace
-the current `http-html-document`:
-
-- `www-apex-redirect` checks the `Location` header for `https://www.…`
-- `http-https-apex-redirect` checks the `Location` header for `http://…`
-- `http-https-www-redirect` checks the `Location` header for `http://www.…`
-
-I might drop the HTML comparison or I might keep it on top of to the `Location`
-response header check in the above three pipelines.
 
 ### Add pipelines that check the redirects to the main domain from other ones
 
