@@ -1,6 +1,6 @@
 # [Hubelbauer.net](https://hubelbauer.net)
 
-![](https://github.com/TomasHubelbauer/hubelbauer.net/actions/workflows/pages/pages-build-deployment/badge.svg)
+![](https://github.com/tomashubelbauer/hubelbauer.net/actions/workflows/pages/pages-build-deployment/badge.svg)
 ![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/dns-a-records/badge.svg)
 ![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/dns-aaaa-records/badge.svg)
 ![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/dns-cname-record/badge.svg)
