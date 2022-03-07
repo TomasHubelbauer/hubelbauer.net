@@ -1,3 +1,4 @@
+# https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain
 PATTERN="tomashubelbauer.github.io."
 
 OUTPUT=`dig www.hubelbauer.net +short -t CNAME`;

@@ -1,3 +1,4 @@
+# https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain
 PATTERN="2606:50c0:8000::153
 2606:50c0:8001::153
 2606:50c0:8002::153

@@ -9,16 +9,6 @@
 
 This repository hosts my personal website.
 
-## Pipelines
-
-This repository has a few pipelines associated with it (see the badges above)
-and they periodicaly check the GitHub Pages custom domain setup, including the
-for [apex] domain and the [www][www] subdomain, HTTP to HTTPS redirect and Let's
-Encrypt SSL certificate.
-
-[apex]: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain
-[www]: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain-and-the-www-subdomain-variant
-
 ## To-Do
 
 ### Add a pipeline that checks for the WWW subdomain to apex domain redirect
