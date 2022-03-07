@@ -40,9 +40,6 @@ setup and so on.
 
 ### Reuse the DNS and redirect checking pipelines for my other domains elsewhere
 
-For `async-await.net`, set up the pipelines in its repository repo and buy the
-`.cz` as well.
-
 For `rhaeo.net`, `rhaeo.com`, `rhaeo.cz`, set up the pipelines in its respective
 repository.
 
