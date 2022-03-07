@@ -8,32 +8,36 @@
 ![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/http-https-redirect/badge.svg)
 ![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/http-www-redirect/badge.svg)
 ![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/https-www-redirect/badge.svg)
+![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/hubelbauer.cz-redirect/badge.svg)
+![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/tomashubelbauer.cz-redirect/badge.svg)
+![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/tomashubelbauer.net-redirect/badge.svg)
 
 This repository hosts my personal website.
 
 ## To-Do
 
-### Add pipelines that check the redirects to the main domain from other ones
+### Add pipelines that check DNS records of the redirect domains
 
-I also have `tomashubelbauer.net` and `hubelbauer.cz` and `tomashubelbauer.cz`
-which all should redirect to `hubelbauer.net` and this should be checked using
-a pipeline, too.
+While I'm at it, why not also check the DNS records of the redirect domains to
+make sure they don't contain records I don't expect to see. I will likely find
+records to remove while setting this up. What should be left is basically just
+Wedos DNS servers and Wedos email records. I should do this for hubelbauer.net,
+too, but there the situation will be a bit more complex with the Fastmail email
+setup and so on.
 
-I might also add more hollistic checks other DNS entries here. Like checking my
-email configuration stays solid and static on `hubelbauer.net` and there are no
-new unknown DNS entries of any kind. I will probably find a bunch to remove.
+### Reuse the DNS and redirect checking pipelines for my other domains elsewhere
 
-Additionally, I might want to either set up a new repository for this, or just
-keep a list of my other domains here and do similar checks for them. These would
-include `onewheelprague.cz`, `async-await.net` and I might buy `async-await.cz`
-too.
+For `async-await.net`, set up the pipelines in its repository repo and buy the
+`.cz` as well.
 
-`rhaeo.net`, `rhaeo.com`, `rhaeo.cz` I will likely add logic for in its own
+For `rhaeo.net`, `rhaeo.com`, `rhaeo.cz`, set up the pipelines in its respective
 repository.
 
-`musicblackholes.com` I will have logic for in its own repository for sure. I'll
-want to check more things there specific to that domain (like email).
+For `musicblackholes.com`, set up the pipeline in its respective repository.
+Also look into extra stuff like proper email setup and uptime checks.
 
-I have a bunch of domains with other registrars, I don't even know which all,
-but definitely CloudFlare, probably Namecheap and maybe GoDaddy. I will look
-through those later.
+For `onewheelprague.cz` and other domains I have not discovered yet (there are
+some in CloudFlare, maybe also in Namecheap and possibly even GoDaddy?), set up
+a separate repository for checking these away from this repository.
+
+### Consider buying the `.com`s and adding redirect checks for them as well
