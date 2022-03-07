@@ -16,6 +16,15 @@ This repository hosts my personal website.
 
 ## To-Do
 
+### Hear back from GitHub support about why the `chmod +x` step is needed
+
+I had to add this step to the the `tomashubelbauer.cz-redirect.yml` and
+`tomashubelbauer.net-redirect.yml` workflows. I thought it was because of the
+two periods in the name, but the `hubelbauer.cz-redirect.sh` workflow introduced
+at the same time just worked, so it's something else. I don't think I should
+need to add the `chmod` call if other shell scripts don't need it. Let's see
+what's up with that.
+
 ### Add pipelines that check DNS records of the redirect domains
 
 While I'm at it, why not also check the DNS records of the redirect domains to
