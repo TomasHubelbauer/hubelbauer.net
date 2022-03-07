@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Check hubelbauer.net:80 HTML document
         run: .github/workflows/http-html-document.sh
-      - name: Upload ouput and pattern artifacts for debugging
+      - name: Upload output and pattern artifacts for debugging in case of an error
         uses: actions/upload-artifact@v3
         if: failure()
         with:
