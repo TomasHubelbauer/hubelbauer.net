@@ -9,8 +9,10 @@
 ![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/http-www-redirect/badge.svg)
 ![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/https-www-redirect/badge.svg)
 ![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/hubelbauer.cz-redirect/badge.svg)
+![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/hubelbauer.com-redirect/badge.svg)
 ![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/tomashubelbauer.cz-redirect/badge.svg)
 ![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/tomashubelbauer.net-redirect/badge.svg)
+![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/tomashubelbauer.com-redirect/badge.svg)
 
 This repository hosts my personal website.
 
@@ -36,5 +38,3 @@ Also look into extra stuff like proper email setup and uptime checks.
 For `onewheelprague.cz` and other domains I have not discovered yet (there are
 some in CloudFlare, maybe also in Namecheap and possibly even GoDaddy?), set up
 a separate repository for checking these away from this repository.
-
-### Consider buying the `.com`s and adding redirect checks for them as well
