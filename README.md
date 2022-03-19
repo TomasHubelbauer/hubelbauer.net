@@ -13,6 +13,8 @@
 ![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/tomashubelbauer.cz-redirect/badge.svg)
 ![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/tomashubelbauer.net-redirect/badge.svg)
 ![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/tomashubelbauer.com-redirect/badge.svg)
+![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/tomashubelbauer.art-a-record/badge.svg)
+![](https://github.com/tomashubelbauer/hubelbauer.net/workflows/tomashubelbauer.art-aaaa-record/badge.svg)
 
 This repository hosts my personal website.
 
