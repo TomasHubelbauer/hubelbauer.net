@@ -1,5 +1,5 @@
 # https://redirect.pizza/support/dns-type
-PATTERN="2a01:7c8:e001:1a:0:0:0:6ab2"
+PATTERN="2a01:7c8:e001:1a::6ab2"
 
 OUTPUT=`dig hubelbauer.art +short -t AAAA`;
 
