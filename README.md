@@ -40,3 +40,7 @@ Also look into extra stuff like proper email setup and uptime checks.
 For `onewheelprague.cz` and other domains I have not discovered yet (there are
 some in CloudFlare, maybe also in Namecheap and possibly even GoDaddy?), set up
 a separate repository for checking these away from this repository.
+
+### Add https://github.com/TomasHubelbauer/tomashubelbauer.today
+
+Forgot about this one!
