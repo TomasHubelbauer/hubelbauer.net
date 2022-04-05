@@ -20,6 +20,17 @@ This repository hosts my personal website.
 
 ## To-Do
 
+### Collect workflow runs data using GitHub API and display uptime charts
+
+Sometimes some of the redirects act out, I would like to see how often so let's
+add some charts.
+
+### Dump extra information in a case of a workflow failure
+
+When checking for example a DNS record or an HTTP header, in case of failure,
+dump the whole DNS recordset or the whole HTTP response including all headers
+and the body to aid debugging.
+
 ### Add pipelines that check DNS records of the redirect domains
 
 While I'm at it, why not also check the DNS records of the redirect domains to
