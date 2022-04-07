@@ -55,3 +55,8 @@ a separate repository for checking these away from this repository.
 ### Add https://github.com/TomasHubelbauer/tomashubelbauer.today
 
 Forgot about this one!
+
+### Add tom.menu and create a GitHub Pages with optional HTTPS as a link tree
+
+This is is the only domain I have in Namecheap it seems. HTTPS optional so I can
+do `curl tom.menu/x | sh` without having to specify `https://` and `-L`.
