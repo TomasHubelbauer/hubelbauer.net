@@ -60,3 +60,7 @@ Forgot about this one!
 
 This is is the only domain I have in Namecheap it seems. HTTPS optional so I can
 do `curl tom.menu/x | sh` without having to specify `https://` and `-L`.
+
+### Add a workflow to check the landing page returns a 200
+
+This will reveal any errors in the GitHub Pages setup.
