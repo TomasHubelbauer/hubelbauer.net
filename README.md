@@ -52,9 +52,10 @@ For `onewheelprague.cz` and other domains I have not discovered yet (there are
 some in CloudFlare, maybe also in Namecheap and possibly even GoDaddy?), set up
 a separate repository for checking these away from this repository.
 
-### Add https://github.com/TomasHubelbauer/tomashubelbauer.today
+### Add tomashubelbauer.today
 
-Forgot about this one!
+Forgot about this one! Need to decide whether it should be a different site or a
+redirect.
 
 ### Add tom.menu and create a GitHub Pages with optional HTTPS as a link tree
 
