@@ -20,6 +20,10 @@ This repository hosts my personal website.
 
 ## To-Do
 
+### Add a workflow to push into this repo once a month to keep workflows alive
+
+GitHub now disables workflows after 60 days of repository inactivity.
+
 ### Collect workflow runs data using GitHub API and display uptime charts
 
 Sometimes some of the redirects act out, I would like to see how often so let's
