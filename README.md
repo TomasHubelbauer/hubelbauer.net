@@ -28,6 +28,8 @@ This will make the hard-coded patterns and the diffs generated when updating
 them as the LE certificates get regenerated to update their validity windows
 much more readable.
 
+See https://stackoverflow.com/q/74295101/2715716
+
 ### Add a workflow to push into this repo once a month to keep workflows alive
 
 GitHub now disables workflows after 60 days of repository inactivity.
