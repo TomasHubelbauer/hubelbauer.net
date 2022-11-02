@@ -20,6 +20,14 @@ This repository hosts my personal website.
 
 ## To-Do
 
+### Decode Base64 blocks in certificate patterns prior to the comparions
+
+https://www.sslshopper.com/certificate-decoder.html
+
+This will make the hard-coded patterns and the diffs generated when updating
+them as the LE certificates get regenerated to update their validity windows
+much more readable.
+
 ### Add a workflow to push into this repo once a month to keep workflows alive
 
 GitHub now disables workflows after 60 days of repository inactivity.
