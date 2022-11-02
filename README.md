@@ -28,7 +28,41 @@ This will make the hard-coded patterns and the diffs generated when updating
 them as the LE certificates get regenerated to update their validity windows
 much more readable.
 
-See https://stackoverflow.com/q/74295101/2715716
+I tried this in pure Bash but failed: https://stackoverflow.com/q/74295101/2715716
+
+This mix of Bash and Python works but it is ugly:
+
+```bash
+# Feed `echo` into `openssl` so it doesn't stall on interactivity
+# Drop `openssl` standard error stream to not leak into the output
+# Skip `SSL-Session` section as it is variable and irrelevant
+# Extract `-----BEGIN CERTIFICATE-----…-----END CERTIFICATE-----`
+# Save each Base64 payload to `temp.crt` for OpenSSL to read it from
+# Run `openssl x509 -in temp.crt -text -noout` to get certificate text
+# Delete `temp.crt` to clean up after self and prevent mismatches
+# Replace the `CERTIFICATE` block with the textual representation
+echo | openssl s_client -showcerts -connect hubelbauer.net:443 2>/dev/null | grep -v "^    " | python3 -c "
+import fileinput
+import re
+import subprocess
+import os
+
+stdin=''.join(fileinput.input())
+
+def replace(match):
+  with open('temp.crt', 'w') as text_file:
+    print(match.group(), file=text_file)
+
+  process = subprocess.run(['openssl', 'x509', '-in', 'temp.crt', '-text', '-noout'], capture_output=True, text=True)
+  os.remove('temp.crt')
+
+  return '-----BEGIN CERTIFICATE-----\n' + process.stdout + '\n-----END CERTIFICATE-----'
+
+stdout=re.sub(r'-----BEGIN CERTIFICATE-----(\n(.*\n)+?)-----END CERTIFICATE-----', replace, stdin)
+
+print(stdout)
+"
+```
 
 ### Add a workflow to push into this repo once a month to keep workflows alive
 
