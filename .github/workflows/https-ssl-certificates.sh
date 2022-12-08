@@ -317,7 +317,8 @@ Post-Handshake New Session Ticket arrived:
 SSL-Session:
 
 ---
-read R BLOCK"
+read R BLOCK
+"
 
 # Send the `echo` to `openssl s_client`` otherwise it will wait for user input
 # Remove `SSL-Session` section items as they vary across runs and are irrelevant
