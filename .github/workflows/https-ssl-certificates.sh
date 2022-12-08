@@ -148,7 +148,8 @@ while IFS= read -r LINE; do
     echo "" > cert.crt
 
     # Print the original line to the output to delineate the start of the cert
-    OUTPUT+="$LINE\n"
+    OUTPUT+="$LINE
+"
 
     # Mark the state signifying reading the BASE64 line set without printing it
     BASE64=1
@@ -164,7 +165,8 @@ while IFS= read -r LINE; do
     TEXT=`openssl x509 -in cert.crt -text -noout`
 
     # Print the output of the `openssl -text` command to replace the BASE64 text
-    OUTPUT+="$TEXT\n"
+    OUTPUT+="$TEXT
+"
 
     # Delete the certificate temporary file to leave the FS tidy after our run
     rm cert.crt
@@ -181,7 +183,8 @@ while IFS= read -r LINE; do
     continue
   fi
 
-  OUTPUT+="$LINE\n"
+  OUTPUT+="$LINE
+"
 done <<< "$RAW"
 
 echo "Output:"
