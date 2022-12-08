@@ -134,6 +134,17 @@ SSL-Session:
 ---
 read R BLOCK"
 
+echo "start"
+echo |
+openssl s_client -showcerts -connect hubelbauer.net:443 |
+sed '/^-----BEGIN CERTIFICATE-----$/!b
+     :a
+     N
+     /\n-----END CERTIFICATE-----$/!ba
+     s/.*/openssl x509 -in <(cat <<"EOF"\n&\nEOF\n) -text -noout/e
+     s/.*/-----BEGIN CERTIFICATE-----\n&\n-----END CERTIFICATE----/'
+echo "end"
+
 # Send the echo into openssl s_client otherwise it will stall for user input
 # Remove SSL-Session section items as they vary across runs and are irrelevant
 OUTPUT=`echo | openssl s_client -showcerts -connect hubelbauer.net:443 | grep -v "^    "`;
