@@ -384,6 +384,9 @@ echo
 if [ "$OUTPUT" == "$PATTERN" ]; then
   echo "Match!"
 else
-  echo "Not a match!"
+  echo "Not a match! Diff:"
+  echo "$PATTERN" > pattern.txt
+  echo "$OUTPUT" > output.txt
+  diff pattern.txt output.txt
   exit 1
 fi
