@@ -312,12 +312,6 @@ No ALPN negotiated
 Early data was not sent
 Verify return code: 0 (ok)
 ---
----
-Post-Handshake New Session Ticket arrived:
-SSL-Session:
-
----
-read R BLOCK
 "
 
 # Send the `echo` to `openssl s_client`` otherwise it will wait for user input
