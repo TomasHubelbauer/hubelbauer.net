@@ -1,9 +1,8 @@
 # Note that the output of the command used here gives different results based on
 # whether it has run on the pipeline agent or my Mac, but it always gives the
-# same output on the same machine. I have used the pipeline agent output here as
-# that's where it needs to run correctly and I can always change it for local
-# debugging if need be.
-PATTERN=$(cat .github/workflows/https-ssl-certificates.txt)
+# same output on the same machine
+# Note we're dropping the trailing newlines from both the pattern and the output
+PATTERN=$(cat .github/workflows/https-ssl-certificates.txt | sed -Ez '$ s/\n+$//')
 
 # Send the `echo` to `openssl s_client`` otherwise it will wait for user input
 # Remove `SSL-Session` section items as they vary across runs and are irrelevant
@@ -57,6 +56,9 @@ while IFS= read -r LINE; do
   OUTPUT+="$LINE
 "
 done <<< "$RAW"
+
+# Drop the triailing newlines in the output to be comparable to the pattern
+OUTPUT=$(echo "$OUTPUT" | sed -Ez '$ s/\n+$//')
 
 echo "Output:"
 echo "$OUTPUT" | tee output
