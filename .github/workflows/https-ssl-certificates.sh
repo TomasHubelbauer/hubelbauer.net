@@ -3,7 +3,7 @@
 # same output on the same machine. I have used the pipeline agent output here as
 # that's where it needs to run correctly and I can always change it for local
 # debugging if need be.
-PATTERN=$(cat https-ssl-certificates.txt)
+PATTERN=$(cat .github/workflows/https-ssl-certificates.txt)
 
 # Send the `echo` to `openssl s_client`` otherwise it will wait for user input
 # Remove `SSL-Session` section items as they vary across runs and are irrelevant
