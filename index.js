@@ -25,7 +25,7 @@ for (const line of lines) {
   }
   else if (line === '') {
     if (moduleName === undefined && modulePath === undefined && moduleUrl === undefined) {
-      return;
+      break;
     }
 
     const a = document.createElement('a');
