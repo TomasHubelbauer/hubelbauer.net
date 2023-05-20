@@ -10,5 +10,3 @@ jobs:
     steps:
       - name: Sync .gitmodules changes with Git Modules
         uses: TomasHubelbauer/github-action-auto-git-modules@main
-        env:
-          ACTIONS_STEP_DEBUG: true
