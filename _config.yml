@@ -1,1 +1,1 @@
-include: ['.submodules']
+include: ['.gitmodules']
