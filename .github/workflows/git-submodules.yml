@@ -1,0 +1,12 @@
+name: git-submodules
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 * * * *'
+jobs:
+  git-submodules:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync .gitmodules changes with Git Modules
+        uses: TomasHubelbauer/github-action-auto-git-modules@main
