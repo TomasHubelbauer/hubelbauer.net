@@ -44,18 +44,24 @@
       {% endcase %}
       {% assign maybeSubmodule = line | slice: 1, 9 %}
       {% if maybeSubmodule == 'submodule' %}
-        <a href="{{ path }}">
-          {{ title }}
-          {% if description != empty %}
-            <div>
-              {{ description }}
-            </div>
-          {% endif %}
-        </a>
-        {% for topic in topics %}
-          <span>{{ topic }}</span>
-        {% endfor %}
-        <a href="{{ url }}" target="_blank">Source on GitHub</a>
+        <div class="card">
+          <a href="{{ path }}">
+            {{ title }}
+            {% if description != empty %}
+              <div>
+                {{ description }}
+              </div>
+            {% endif %}
+          </a>
+          <div>
+            {% for topic in topics %}
+              <span>{{ topic }}</span>
+            {% endfor %}
+            <a href="{{ url }}" target="_blank">
+              <img src="https://github.com/favicon.ico" />
+            </a>
+          </div>
+        </div>
         {% assign path = empty %}
         {% assign url = empty %}
         {% assign title = empty %}
