@@ -24,3 +24,8 @@ body {
   display: flex;
   gap: 1ex;
 }
+
+.card > div > a > img {
+  height: 16px;
+  width: 16px;
+}
