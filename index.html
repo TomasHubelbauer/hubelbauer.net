@@ -23,13 +23,16 @@
     {% assign lines = text | newline_to_br | strip_newlines | split: '<br />' %}
     {% for rawLine in lines %}
       {% assign line = rawLine | strip %}
-      {% assign pair = line | split: ' ] ' %}
+      {% assign pair = line | split: ' = ' %}
       {% assign key = pair | first %}
       {% assign value = pair | last %}
-      <!-- {{ key }}: {{ value }} -->
-      {% if key == 'path' %}
-        <!-- "{{ value }}" -->
-      {% endif %}
+      {% # Skip lines that are not key value pairs (have no ' = ') %}
+      {% unless key == value %}
+        <!-- "{{ key }}": "{{ value }}" -->
+        {% if key == 'path' %}
+          <!-- "{{ value }}" -->
+        {% endif %}
+      {% endunless %}
     {% endfor %}
     {% for file in site.static_files %}
       {% assign components = file.path | split: '/' %}
