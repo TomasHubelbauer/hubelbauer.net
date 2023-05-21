@@ -44,8 +44,9 @@
         {% when "archived" %}{% assign archived = value %}
         {% when "topics" %}{% assign topics = value %}
       {% endcase %}
-      <!-- "{{ line }}" "{{ line | slice: 1, 1 }}" "{{ line | slice: -1, 1 }}" -->
-      {% if line | slice: 1, 1 == '[' and line | slice: -1, 1 == ']' %}
+      {% assign chars = line | split: '' %}
+      <!-- "{{ line }}" "{{ chars | first }}" "{{ chars | last }}" -->
+      {% if chars | first == '[' and chars | last == ']' %}
         <a href="{{ path }}">{{ path }}</a>
         {% assign path = empty %}
         {% assign url = empty %}
