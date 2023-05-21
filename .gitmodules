@@ -22,6 +22,10 @@
 	topics = containers,docker,podman
 	title = Podman
 
+[submodule "fatcow-icons"]
+	path = fatcow-icons
+	url = https://github.com/TomasHubelbauer/fatcow-icons
+
 [submodule "git-demo-submodule"]
 	path = git-demo-submodule
 	url = https://github.com/TomasHubelbauer/git-demo-submodule
