@@ -60,9 +60,14 @@
             {%- for topic in topics %}
               <span>{{ topic }}</span>
             {%- endfor %}
-            <a href="{{ url }}" target="_blank" title="{{ path }} source code">
-              <img src="https://github.com/favicon.ico" />
+            <a href="{{ url }}" target="_blank" title="{{ path }} source code on GitHub">
+              🗄️
             </a>
+            {%- if homepage != empty %}
+              <a href="{{ homepage }}" target="_blank" title="{{ path }} GitHub Pages web site">
+                🌍
+              </a>
+            {%- endif %}
           </div>
         </div>
         {%- assign path = empty -%}
@@ -78,7 +83,7 @@
       {%- endif -%}
     {%- endfor %}
     <hr />
-    <a href="https://github.com/TomasHubelbauer/hubelbauer.net" target="_blank" title="hubelbauer.net source code">
+    <a href="https://github.com/TomasHubelbauer/hubelbauer.net" target="_blank" title="hubelbauer.net source code on GitHub">
       <img src="https://github.com/favicon.ico" />
     </a>
   </body>
