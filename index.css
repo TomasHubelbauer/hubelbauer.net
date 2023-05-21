@@ -34,16 +34,6 @@ body {
   justify-content: center;
 }
 
-.card > div > a {
-  /* Make the link copy the dimensions of the image and not fit the line size */
-  display: flex;
-}
-
-.card > div > a > img {
-  height: 16px;
-  width: 16px;
-}
-
 hr {
   background: whitesmoke;
   border: none;
