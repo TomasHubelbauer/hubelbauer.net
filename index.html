@@ -25,6 +25,8 @@
           {% assign path = value %}
         {% when "url" %}
           {% assign url = value %}
+        {% when "title" %}
+          {% assign title = value %}
         {% when "description" %}
           {% assign description = value %}
         {% when "created-at" %}
@@ -42,9 +44,15 @@
       {% endcase %}
       {% assign maybeSubmodule = line | slice: 1, 9 %}
       {% if maybeSubmodule == 'submodule' %}
-        <a href="{{ path }}">{{ path }}</a>
+        <a href="{{ path }}">
+          {{ title }}
+          <div>
+            {{ description }}
+          </div>
+        </a>
         {% assign path = empty %}
         {% assign url = empty %}
+        {% assign title = empty %}
         {% assign description = empty %}
         {% assign createdAt = empty %}
         {% assign updatedAt = empty %}
