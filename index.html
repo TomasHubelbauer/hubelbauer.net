@@ -23,9 +23,12 @@
     {% assign lines = text | newline_to_br | strip_newlines | split: '<br />' %}
     {% for rawLine in lines %}
       {% assign line = rawLine | strip %}
-      <!-- RAW: "{{ rawLine }}" | Trimmed: "{{ line }}" -->
-      {% if line | slice: 0, 7 == 'path = ' %}
-        <!-- {{ line | slice: 7, - }} -->
+      {% assign pair = line | split: ' ] ' %}
+      {% assign key = pair | first %}
+      {% assign value = pair | last %}
+      <!-- {{ key }}: {{ value }} -->
+      {% if key == 'path' %}
+        <!-- "{{ value }}" -->
       {% endif %}
     {% endfor %}
     {% for file in site.static_files %}
