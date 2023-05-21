@@ -34,7 +34,6 @@
       {% endcomment %}  
       {% comment %} Skip lines that are not key value pairs (have no ' = ') {% endcomment %}
       {% unless key == value %}
-        <!-- "{{ key }}": "{{ value }}" -->
         {% if key == 'path' %}
           <a href="{{ value }}">{{ value }}</a>
         {% endif %}
