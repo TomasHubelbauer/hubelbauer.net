@@ -13,7 +13,6 @@
   </head>
   <body>
     <h1>Tomas Hubelbauer</h1>
-    <a href="posts/podman">Podman</a>
     {% capture text %}{% include_relative .gitmodules %}{% endcapture %}
     {% assign lines = text | newline_to_br | strip_newlines | split: '<br />' | reverse %}
     {% for rawLine in lines %}
