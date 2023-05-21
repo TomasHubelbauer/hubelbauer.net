@@ -19,11 +19,11 @@
       <code>.DS_Store</code>
       Global Ignore
     </a>
-    <!--
-    {% include_relative .gitmodules | newline_to_br | strip_newlines | split: '<br />' %}
-    ---
-    {% include_relative .gitmodules | newline_to_br | strip_newlines | split: '<br />' %}
-    -->
+    {% capture text %}{% include_relative .gitmodules %}{% endcapture %}
+    {% assign lines = text | newline_to_br | strip_newlines | split: '<br />' %}
+    {% for line in lines %}
+      <!-- {{ line }} -->
+    {% endfor %}
     {% for file in site.static_files %}
       {% assign components = file.path | split: '/' %}
       {% assign directory_name = components | slice: 1 | first %}
