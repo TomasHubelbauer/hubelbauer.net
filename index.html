@@ -20,7 +20,7 @@
       Global Ignore
     </a>
     {% capture text %}{% include_relative .gitmodules %}{% endcapture %}
-    {% assign lines = text | newline_to_br | strip_newlines | split: '<br />' %}
+    {% assign lines = text | newline_to_br | strip_newlines | split: '<br />' | reverse %}
     {% for rawLine in lines %}
       {% assign line = rawLine | strip %}
       {% assign pair = line | split: ' = ' %}
@@ -44,7 +44,8 @@
         {% when "archived" %}{% assign archived = value %}
         {% when "topics" %}{% assign topics = value %}
       {% endcase %}
-      {% if line == empty %}
+      <!-- "{{ line }}" "{{ line | slice: 1, 1 }}" "{{ line | slice: -1, 1 }}" -->
+      {% if line | slice: 1, 1 == '[' and line | slice: -1, 1 == ']' %}
         <a href="{{ path }}">{{ path }}</a>
         {% assign path = empty %}
         {% assign url = empty %}
