@@ -23,9 +23,8 @@
       {% assign components = file.path | split: '/' %}
       {% assign directory_name = components | slice: 1 | first %}
       {% assign file_name = components | slice: 2 | first %}
-      <!-- Test: {{ directory_name }} and {{ file_name }} -->
       {% if file_name == 'README.md' or file_name == 'readme.md' %}
-        <!-- Pass: {{ directory_name }} -->
+        <a href="{{ directory_name }}">{{ directory_name }}</a>
       {% endif %}
     {% endfor %}
   </body>
