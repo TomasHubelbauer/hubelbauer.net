@@ -3,9 +3,9 @@
 	url = https://github.com/TomasHubelbauer/git-dot-ds_store-global-ignore
 	description = Information on how to hide the infamous .DS_Store macOS file using the global Git ignore configuration option.
 	created-at = 2023-05-21T17:06:24Z
-	updated-at = 2023-05-21T19:23:43Z
+	updated-at = 2023-05-21T21:15:02Z
 	pushed-at = 2023-05-21T17:07:07Z
-	homepage = 
+	homepage = https://hubelbauer.net/git-dot-ds_store-global-ignore/
 	archived = false
 	topics = dsstore,git,git-ignore,macos
 	title = Git `.DS_Store` Global Ignore
@@ -15,9 +15,9 @@
 	url = https://github.com/TomasHubelbauer/podman
 	description = My explorations of the Podman container tool, an alternative to Docker.
 	created-at = 2023-05-21T17:12:00Z
-	updated-at = 2023-05-21T18:53:41Z
+	updated-at = 2023-05-21T21:14:39Z
 	pushed-at = 2023-05-21T17:12:57Z
-	homepage = 
+	homepage = https://hubelbauer.net/podman/
 	archived = false
 	topics = containers,docker,podman
 	title = Podman
@@ -36,11 +36,11 @@
 [submodule "git-demo-submodule"]
 	path = git-demo-submodule
 	url = https://github.com/TomasHubelbauer/git-demo-submodule
-	description = 
+	description = A demo submodule used by my other repos.
 	created-at = 2023-03-28T17:06:57Z
-	updated-at = 2023-03-28T22:15:33Z
+	updated-at = 2023-05-21T21:15:48Z
 	pushed-at = 2023-05-20T00:33:01Z
-	homepage = 
+	homepage = https://hubelbauer.net/git-demo-submodule/
 	archived = false
-	topics = 
+	topics = git,git-modules,submodules
 	title = Git Demo Submodule
