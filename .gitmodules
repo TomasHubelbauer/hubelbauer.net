@@ -33,15 +33,3 @@
 	archived = false
 	topics = fatcow,fatcow-icons,icon-pack,icon-set,icons
 	title = FatCow Icons
-
-[submodule "git-demo-submodule"]
-	path = git-demo-submodule
-	url = https://github.com/TomasHubelbauer/git-demo-submodule
-	description = A demo submodule used by my other repos.
-	created-at = 2023-03-28T17:06:57Z
-	updated-at = 2023-05-21T21:15:48Z
-	pushed-at = 2023-05-20T00:33:01Z
-	homepage = https://hubelbauer.net/git-demo-submodule/
-	archived = false
-	topics = git,git-modules,submodules
-	title = Git Demo Submodule
