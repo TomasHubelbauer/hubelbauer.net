@@ -3,8 +3,24 @@ body {
   flex-direction: column;
   font-family: sans-serif;
   font-size: 12pt;
+  gap: 1em;
   line-height: 125%;
   margin: auto;
-  max-width: 80em;
+  max-width: 80ch;
   text-align: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1ex;
+}
+
+.card > a {
+  display: block;
+}
+
+.card > div {
+  display: flex;
+  gap: 1ex;
 }
