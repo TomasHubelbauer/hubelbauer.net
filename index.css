@@ -23,6 +23,7 @@ body {
 
 .card > a {
   display: block;
+  padding: 1ex;
   text-decoration: none;
 }
 
