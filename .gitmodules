@@ -1,11 +1,11 @@
 [submodule "git-demo-submodule"]
 	path = git-demo-submodule
 	url = https://github.com/TomasHubelbauer/git-demo-submodule
-	description = undefined
+	description = 
 	created-at = 2023-03-28T17:06:57Z
 	updated-at = 2023-03-28T22:15:33Z
 	pushed-at = 2023-05-20T00:33:01Z
-	homepage = null
+	homepage = 
 	archived = false
 	topics = 
 	title = Git Demo Submodule
@@ -13,11 +13,11 @@
 [submodule "git-dot-ds_store-global-ignore"]
 	path = git-dot-ds_store-global-ignore
 	url = https://github.com/TomasHubelbauer/git-dot-ds_store-global-ignore
-	description = undefined
+	description = 
 	created-at = 2023-05-21T17:06:24Z
 	updated-at = 2023-05-21T17:06:24Z
 	pushed-at = 2023-05-21T17:07:07Z
-	homepage = null
+	homepage = 
 	archived = false
 	topics = 
 	title = Git `.DS_Store` Global Ignore
