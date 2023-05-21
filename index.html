@@ -23,7 +23,7 @@
       {% assign components = file.path | split: '/' %}
       {% assign directory_name = components | slice: 1 %}
       {% assign file_name = components | slice: 2 %}
-      {% if file_name | upcase == 'README.md' %}
+      {% if file_name == 'README.md' or file_name == 'readme.md' %}
         <!-- {{ directory_name }} -->
       {% endif %}
     {% endfor %}
