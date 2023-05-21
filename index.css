@@ -14,6 +14,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1ex;
+  padding: 1ex;
+}
+
+.card:hover {
+  background: whitesmoke;
 }
 
 .card > a {
@@ -25,6 +30,11 @@ body {
   display: flex;
   gap: 1ex;
   justify-content: center;
+}
+
+.card > div > a {
+  /* Make the link copy the dimensions of the image and not fit the line size */
+  display: flex;
 }
 
 .card > div > a > img {
