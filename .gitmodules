@@ -1,32 +1,35 @@
 [submodule "git-demo-submodule"]
 	path = git-demo-submodule
 	url = https://github.com/TomasHubelbauer/git-demo-submodule
-	description = null
+	description = undefined
 	created-at = 2023-03-28T17:06:57Z
 	updated-at = 2023-03-28T22:15:33Z
 	pushed-at = 2023-05-20T00:33:01Z
 	homepage = null
 	archived = false
 	topics = 
+	title = Git Demo Submodule
 
 [submodule "git-dot-ds_store-global-ignore"]
 	path = git-dot-ds_store-global-ignore
 	url = https://github.com/TomasHubelbauer/git-dot-ds_store-global-ignore
-	description = null
+	description = undefined
 	created-at = 2023-05-21T17:06:24Z
 	updated-at = 2023-05-21T17:06:24Z
 	pushed-at = 2023-05-21T17:07:07Z
 	homepage = null
 	archived = false
 	topics = 
+	title = Git `.DS_Store` Global Ignore
 
 [submodule "podman"]
 	path = podman
 	url = https://github.com/TomasHubelbauer/podman
-	description = null
+	description = undefined
 	created-at = 2023-05-21T17:12:00Z
 	updated-at = 2023-05-21T17:13:01Z
 	pushed-at = 2023-05-21T17:12:57Z
 	homepage = null
 	archived = false
 	topics = 
+	title = Podman
