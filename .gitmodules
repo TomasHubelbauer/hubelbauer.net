@@ -8,3 +8,7 @@
 	homepage = null
 	archived = false
 	topics = 
+
+[submodule ""]
+	path = git-dot-ds_store-global-ignore
+	url = https://github.com/TomasHubelbauer/git-dot-ds_store-global-ignore
