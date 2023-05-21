@@ -25,6 +25,7 @@
       {% assign line = rawLine | strip %}
       {% assign pair = line | split: ' = ' %}
       {% assign key = pair | first %}
+      {% assign value = pair | last %}
       {% case key %}
         {% when "path" %}
           {% assign path = value %}
@@ -57,7 +58,6 @@
       {% assign maybeSubmodule = line | slice: 1, 9 %}
       <!-- "{{ maybeSubmodule }}" -->
       {% if maybeSubmodule == 'submodule' %}
-        {% assign value = pair | last %}
         <a href="{{ path }}">{{ path }}</a>
         {% assign path = empty %}
         {% assign url = empty %}
