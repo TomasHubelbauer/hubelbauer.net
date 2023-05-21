@@ -46,11 +46,11 @@
       {% if maybeSubmodule == 'submodule' %}
         <a href="{{ path }}">
           {{ title }}
-          {% if description != empty %}
+          {% unless description == empty %}
             <div>
               {{ description }}
             </div>
-          {% endif %}
+          {% endunless %}
           {% for topic in topics %}
             <span>{{ topic }}</span>
           {% endfor %}
