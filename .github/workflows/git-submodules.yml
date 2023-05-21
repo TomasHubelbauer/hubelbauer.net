@@ -1,5 +1,8 @@
 name: git-submodules
 on:
+  push:
+    paths:
+      - .gitmodules
   workflow_dispatch:
   schedule:
     - cron: '0 * * * *'

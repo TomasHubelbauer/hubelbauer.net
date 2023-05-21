@@ -1,5 +1,9 @@
 name: dns-a-records
 on:
+  push:
+    paths:
+      - .github/workflows/dns-a-records.yml
+      - .github/workflows/dns-a-records.sh
   workflow_dispatch:
   schedule:
     - cron: '0 * * * *'

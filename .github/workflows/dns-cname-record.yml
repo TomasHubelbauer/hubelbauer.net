@@ -1,5 +1,9 @@
 name: dns-cname-record
 on:
+  push:
+    paths:
+      - .github/workflows/dns-cname-record.yml
+      - .github/workflows/dns-cname-record.sh
   workflow_dispatch:
   schedule:
     - cron: '0 * * * *'

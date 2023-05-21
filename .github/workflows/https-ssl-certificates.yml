@@ -1,5 +1,10 @@
 name: https-ssl-certificates
 on:
+  push:
+    paths:
+      - .github/workflows/https-ssl-certificates.yml
+      - .github/workflows/https-ssl-certificates.sh
+      - .github/workflows/https-ssl-certificates.txt
   workflow_dispatch:
   schedule:
     - cron: '0 * * * *'

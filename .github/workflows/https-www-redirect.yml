@@ -1,5 +1,9 @@
 name: https-www-redirect
 on:
+  push:
+    paths:
+      - .github/workflows/https-www-redirect.yml
+      - .github/workflows/https-www-redirect.sh
   workflow_dispatch:
   schedule:
     - cron: '0 * * * *'

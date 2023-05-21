@@ -1,5 +1,9 @@
 name: hubelbauer.com-redirect
 on:
+  push:
+    paths:
+      - .github/workflows/hubelbauer.com-redirect.yml
+      - .github/workflows/hubelbauer.com-redirect.sh
   workflow_dispatch:
   schedule:
     - cron: '0 * * * *'

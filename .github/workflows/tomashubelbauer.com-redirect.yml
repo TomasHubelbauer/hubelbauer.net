@@ -1,5 +1,9 @@
 name: tomashubelbauer.com-redirect
 on:
+  push:
+    paths:
+      - .github/workflows/tomashubelbauer.com-redirect.yml
+      - .github/workflows/tomashubelbauer.com-redirect.sh
   workflow_dispatch:
   schedule:
     - cron: '0 * * * *'

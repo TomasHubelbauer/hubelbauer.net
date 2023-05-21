@@ -1,5 +1,9 @@
 name: hubelbauer.art-aaaa-record
 on:
+  push:
+    paths:
+      - .github/workflows/hubelbauer.art-aaaa-record.yml
+      - .github/workflows/hubelbauer.art-aaaa-record.sh
   workflow_dispatch:
   schedule:
     - cron: '0 * * * *'
