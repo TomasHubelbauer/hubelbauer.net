@@ -47,16 +47,16 @@
         <div class="card">
           <a href="{{ path }}">
             {{ title }}
-            {% if description != empty %}
+            {%- if description != empty %}
               <div>
                 {{ description }}
               </div>
-            {% endif %}
+            {%- endif -%}
           </a>
           <div>
-            {% for topic in topics %}
+            {%- for topic in topics %}
               <span>{{ topic }}</span>
-            {% endfor %}
+            {%- endfor %}
             <a href="{{ url }}" target="_blank" title="{{ path }} source code">
               <img src="https://github.com/favicon.ico" />
             </a>
@@ -73,7 +73,7 @@
         {%- assign archived = empty -%}
         {%- assign topics = empty -%}
       {%- endif -%}
-    {%- endfor -%}
+    {%- endfor %}
     <hr />
     <a href="https://github.com/TomasHubelbauer/hubelbauer.net" target="_blank" title="hubelbauer.net source code">
       <img src="https://github.com/favicon.ico" />
