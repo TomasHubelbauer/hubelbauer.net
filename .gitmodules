@@ -25,6 +25,13 @@
 [submodule "fatcow-icons"]
 	path = fatcow-icons
 	url = https://github.com/TomasHubelbauer/fatcow-icons
+	description = FatCow icons v3.9.2 (I was given a permission to host these on GitHub by FatCow support.)
+	created-at = 2019-06-08T09:17:01Z
+	updated-at = 2023-05-09T07:40:11Z
+	pushed-at = 2023-05-17T15:01:16Z
+	homepage = https://tomashubelbauer.github.io/fatcow-icons
+	archived = false
+	topics = fatcow,fatcow-icons,icon-pack,icon-set,icons
 
 [submodule "git-demo-submodule"]
 	path = git-demo-submodule
