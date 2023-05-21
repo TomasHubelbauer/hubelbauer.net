@@ -29,34 +29,24 @@
       {% case key %}
         {% when "path" %}
           {% assign path = value %}
-          <!-- path = "{{ path }}" -->
         {% when "url" %}
           {% assign url = value %}
-          <!-- url = "{{ url }}" -->
         {% when "description" %}
           {% assign description = value %}
-          <!-- description = "{{ description }}" -->
         {% when "created-at" %}
           {% assign createdAt = value %}
-          <!-- createdAt = "{{ createdAt }}" -->
         {% when "updated-at" %}
           {% assign updatedAt = value %}
-          <!-- updatedAt = "{{ updatedAt }}" -->
         {% when "pushed-at" %}
           {% assign pushedAt = value %}
-          <!-- pushedAt = "{{ pushedAt }}" -->
         {% when "homepage" %}
           {% assign homepage = value %}
-          <!-- homepage = "{{ homepage }}" -->
         {% when "archived" %}
           {% assign archived = value %}
-          <!-- archived = "{{ archived }}" -->
         {% when "topics" %}
           {% assign topics = value %}
-          <!-- topics = "{{ topics }}" -->
       {% endcase %}
       {% assign maybeSubmodule = line | slice: 1, 9 %}
-      <!-- "{{ maybeSubmodule }}" -->
       {% if maybeSubmodule == 'submodule' %}
         <a href="{{ path }}">{{ path }}</a>
         {% assign path = empty %}
