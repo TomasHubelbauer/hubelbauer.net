@@ -21,8 +21,10 @@ body {
 }
 
 .card > div {
+  align-items: center;
   display: flex;
   gap: 1ex;
+  justify-content: center;
 }
 
 .card > div > a > img {
