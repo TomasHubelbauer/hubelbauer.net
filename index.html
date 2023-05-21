@@ -19,9 +19,13 @@
       <code>.DS_Store</code>
       Global Ignore
     </a>
-    {{ site.url }}
-    {% for image in site.static_files %}
-      <!-- {{ image.path }} -->
+    {% for file in site.static_files %}
+      {% assign components = file.path | split: '/' %}
+      {% assign directory_name = components | slice: 1 %}
+      {% assign file_name = components | slice: 2 %}
+      {% if file_name | upcase == 'README.md' %}
+        <!-- {{ directory_name }} -->
+      {% endif %}
     {% endfor %}
   </body>
 </html>
