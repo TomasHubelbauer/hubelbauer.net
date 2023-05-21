@@ -46,9 +46,14 @@
       {% if maybeSubmodule == 'submodule' %}
         <a href="{{ path }}">
           {{ title }}
-          <div>
-            {{ description }}
-          </div>
+          {% if description != empty %}
+            <div>
+              {{ description }}
+            </div>
+          {% endif %}
+          {% for topic in topics %}
+            <span>{{ topic }}</span>
+          {% endfor %}
         </a>
         {% assign path = empty %}
         {% assign url = empty %}
