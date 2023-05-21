@@ -36,17 +36,9 @@
       {% unless key == value %}
         <!-- "{{ key }}": "{{ value }}" -->
         {% if key == 'path' %}
-          <!-- "{{ value }}" -->
+          <a href="{{ value }}">{{ value }}</a>
         {% endif %}
       {% endunless %}
-    {% endfor %}
-    {% for file in site.static_files %}
-      {% assign components = file.path | split: '/' %}
-      {% assign directory_name = components | slice: 1 | first %}
-      {% assign file_name = components | slice: 2 | first %}
-      {% if file_name == 'README.md' or file_name == 'readme.md' %}
-        <a href="{{ directory_name }}">{{ directory_name }}</a>
-      {% endif %}
     {% endfor %}
   </body>
 </html>
