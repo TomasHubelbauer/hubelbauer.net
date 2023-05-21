@@ -43,3 +43,15 @@ body {
   height: 16px;
   width: 16px;
 }
+
+hr {
+  background: whitesmoke;
+  border: none;
+  height: 1px;
+  width: 100%;
+}
+
+body > a > img {
+  height: 16px;
+  width: 16px;
+}
