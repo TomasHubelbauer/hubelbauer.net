@@ -19,6 +19,11 @@
       <code>.DS_Store</code>
       Global Ignore
     </a>
+    <!--
+    {% include_relative .gitmodules | newline_to_br | strip_newlines | split: '<br />' %}
+    ---
+    {% include_relative .gitmodules | newline_to_br | strip_newlines | split: '<br />' %}
+    -->
     {% for file in site.static_files %}
       {% assign components = file.path | split: '/' %}
       {% assign directory_name = components | slice: 1 | first %}
