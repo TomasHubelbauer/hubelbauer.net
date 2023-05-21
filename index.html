@@ -57,7 +57,7 @@
             {% for topic in topics %}
               <span>{{ topic }}</span>
             {% endfor %}
-            <a href="{{ url }}" target="_blank">
+            <a href="{{ url }}" target="_blank" title="{{ path }} source code">
               <img src="https://github.com/favicon.ico" />
             </a>
           </div>
@@ -74,5 +74,9 @@
         {% assign topics = empty %}
       {% endif %}
     {% endfor %}
+    <hr />
+    <a href="https://github.com/TomasHubelbauer/hubelbauer.net" target="_blank" title="hubelbauer.net source code">
+      <img src="https://github.com/favicon.ico" />
+    </a>
   </body>
 </html>
