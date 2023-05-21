@@ -1,6 +1,6 @@
 name: tomashubelbauer.net-redirect
 on:
-  push:
+  workflow_dispatch:
   schedule:
     - cron: '0 * * * *'
 jobs:
