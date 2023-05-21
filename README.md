@@ -74,12 +74,3 @@ do `curl tom.menu/x | sh` without having to specify `https://` and `-L`.
 ### Add a workflow to check the landing page returns a 200
 
 This will reveal any errors in the GitHub Pages setup.
-
-### Remove `posts` and make all content on the site be based on submodules
-
-Now that I finally got this working let's make use of it.
-It makes it so that each piece of content has its own Git history but at the
-same time it is easy to pull the content onto the site without copying it over
-into the repository here or anything like that.
-The GitHub web UI actually makes Git Modules really nice as virtual folders.
-
