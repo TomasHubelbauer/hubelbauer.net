@@ -9,6 +9,6 @@
 	archived = false
 	topics = 
 
-[submodule ""]
+[submodule "git-dot-ds_store-global-ignore"]
 	path = git-dot-ds_store-global-ignore
 	url = https://github.com/TomasHubelbauer/git-dot-ds_store-global-ignore
