@@ -21,3 +21,15 @@
 	archived = false
 	topics = containers,docker,podman
 	title = Podman
+
+[submodule "git-demo-submodule"]
+	path = git-demo-submodule
+	url = https://github.com/TomasHubelbauer/git-demo-submodule
+	description = 
+	created-at = 2023-03-28T17:06:57Z
+	updated-at = 2023-03-28T22:15:33Z
+	pushed-at = 2023-05-20T00:33:01Z
+	homepage = 
+	archived = false
+	topics = 
+	title = Git Demo Submodule
