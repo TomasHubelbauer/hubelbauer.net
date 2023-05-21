@@ -22,7 +22,9 @@
     {% capture text %}{% include_relative .gitmodules %}{% endcapture %}
     {% assign lines = text | newline_to_br | strip_newlines | split: '<br />' %}
     {% for line in lines %}
-      <!-- {{ line }} -->
+      {% if line | slice: 0, 7 == 'path = ' %}
+        <!-- {{ line | slice: 7, - }} -->
+      {% endif %}
     {% endfor %}
     {% for file in site.static_files %}
       {% assign components = file.path | split: '/' %}
