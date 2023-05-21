@@ -23,3 +23,10 @@
 [submodule "podman"]
 	path = podman
 	url = https://github.com/TomasHubelbauer/podman
+	description = null
+	created-at = 2023-05-21T17:12:00Z
+	updated-at = 2023-05-21T17:13:01Z
+	pushed-at = 2023-05-21T17:12:57Z
+	homepage = null
+	archived = false
+	topics = 
