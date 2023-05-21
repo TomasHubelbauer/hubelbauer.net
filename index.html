@@ -40,21 +40,22 @@
         {% when "archived" %}
           {% assign archived = value %}
         {% when "topics" %}
-          {% assign topics = value %}
+          {% assign topics = value | split: ',' %}
       {% endcase %}
       {% assign maybeSubmodule = line | slice: 1, 9 %}
       {% if maybeSubmodule == 'submodule' %}
         <a href="{{ path }}">
           {{ title }}
-          {% unless description == empty %}
+          {% if description %}
             <div>
               {{ description }}
             </div>
-          {% endunless %}
-          {% for topic in topics %}
-            <span>{{ topic }}</span>
-          {% endfor %}
+          {% endif %}
         </a>
+        {% for topic in topics %}
+          <span>{{ topic }}</span>
+        {% endfor %}
+        <a href="{{ url }}" target="_blank">Source on GitHub</a>
         {% assign path = empty %}
         {% assign url = empty %}
         {% assign title = empty %}
