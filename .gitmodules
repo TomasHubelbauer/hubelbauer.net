@@ -19,3 +19,7 @@
 	homepage = null
 	archived = false
 	topics = 
+
+[submodule "podman"]
+	path = podman
+	url = https://github.com/TomasHubelbauer/podman
