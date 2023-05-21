@@ -54,8 +54,9 @@
           {% assign topics = value %}
           <!-- topics = "{{ topics }}" -->
       {% endcase %}
-      <!-- "{{ line | slice: 1, 9 }}" -->
-      {% if line | slice: 1, 9 == 'submodule' %}
+      {% assign maybeSubmodule = line | slice: 1, 9 %}
+      <!-- "{{ maybeSubmodule }}" -->
+      {% if maybeSubmodule == 'submodule' %}
         {% assign value = pair | last %}
         <a href="{{ path }}">{{ path }}</a>
         {% assign path = empty %}
