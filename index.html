@@ -21,7 +21,9 @@
     </a>
     {% capture text %}{% include_relative .gitmodules %}{% endcapture %}
     {% assign lines = text | newline_to_br | strip_newlines | split: '<br />' %}
-    {% for line in lines %}
+    {% for rawLine in lines %}
+      {% assign line = rawLine | strip %}
+      <!-- RAW: "{{ rawLine }}" | Trimmed: "{{ line }}" -->
       {% if line | slice: 0, 7 == 'path = ' %}
         <!-- {{ line | slice: 7, - }} -->
       {% endif %}
