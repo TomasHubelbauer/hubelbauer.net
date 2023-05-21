@@ -55,8 +55,8 @@
           <!-- topics = "{{ topics }}" -->
       {% endcase %}
       {% assign chars = line | split: '' %}
-      {% assing firstChat = chars | first %}
-      {% assing lastChat = chars | last %}
+      {% assign firstChat = chars | first %}
+      {% assign lastChat = chars | last %}
       <!-- "{{ line }}" "{{ firstChat }}" "{{ lastChat }}" "{{ firstChat == '[' }}" "{{ lastChat == ']' }}" -->
       {% if firstChat == '[' and lastChat == ']' %}
         {% assign value = pair | last %}
