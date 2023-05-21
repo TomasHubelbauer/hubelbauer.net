@@ -33,11 +33,29 @@
       - https://shopify.github.io/liquid/tags/template#inline-comments
       {% endcomment %}  
       {% comment %} Skip lines that are not key value pairs (have no ' = ') {% endcomment %}
-      {% unless key == value %}
-        {% if key == 'path' %}
-          <a href="{{ value }}">{{ value }}</a>
-        {% endif %}
-      {% endunless %}
+      {% case key %}
+        {% when "path" %}{% assign path = value %}
+        {% when "url" %}{% assign url = value %}
+        {% when "description" %}{% assign description = value %}
+        {% when "createdAt" %}{% assign createdAt = value %}
+        {% when "updatedAt" %}{% assign updatedAt = value %}
+        {% when "pushedAt" %}{% assign pushedAt = value %}
+        {% when "homepage" %}{% assign homepage = value %}
+        {% when "archived" %}{% assign archived = value %}
+        {% when "topics" %}{% assign topics = value %}
+      {% endcase %}
+      {% if line == empty %}
+        <a href="{{ path }}">{{ path }}</a>
+        {% assign path = empty %}
+        {% assign url = empty %}
+        {% assign description = empty %}
+        {% assign createdAt = empty %}
+        {% assign updatedAt = empty %}
+        {% assign pushedAt = empty %}
+        {% assign homepage = empty %}
+        {% assign archived = empty %}
+        {% assign topics = empty %}
+      {% endif %}
     {% endfor %}
   </body>
 </html>
