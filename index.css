@@ -51,7 +51,7 @@ hr {
   width: 100%;
 }
 
-body > a > img {
+body > a > img:not([src$=.svg]) {
   height: 16px;
   width: 16px;
 }
