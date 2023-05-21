@@ -25,28 +25,41 @@
       {% assign line = rawLine | strip %}
       {% assign pair = line | split: ' = ' %}
       {% assign key = pair | first %}
-      {% assign value = pair | last %}
-      {% comment %}
-      Note that GitHub Pages uses Liquid 4.0.4 which doesn't support inline
-      comments which were introduced in Liquid 5.0.4:
-      - https://pages.github.com/versions (see "liquid: 4.0.4")
-      - https://shopify.github.io/liquid/tags/template#inline-comments
-      {% endcomment %}  
-      {% comment %} Skip lines that are not key value pairs (have no ' = ') {% endcomment %}
       {% case key %}
-        {% when "path" %}{% assign path = value %}
-        {% when "url" %}{% assign url = value %}
-        {% when "description" %}{% assign description = value %}
-        {% when "createdAt" %}{% assign createdAt = value %}
-        {% when "updatedAt" %}{% assign updatedAt = value %}
-        {% when "pushedAt" %}{% assign pushedAt = value %}
-        {% when "homepage" %}{% assign homepage = value %}
-        {% when "archived" %}{% assign archived = value %}
-        {% when "topics" %}{% assign topics = value %}
+        {% when "path" %}
+          {% assign path = value %}
+          <!-- path = "{{ path }}" -->
+        {% when "url" %}
+          {% assign url = value %}
+          <!-- url = "{{ url }}" -->
+        {% when "description" %}
+          {% assign description = value %}
+          <!-- description = "{{ description }}" -->
+        {% when "createdAt" %}
+          {% assign createdAt = value %}
+          <!-- createdAt = "{{ createdAt }}" -->
+        {% when "updatedAt" %}
+          {% assign updatedAt = value %}
+          <!-- updatedAt = "{{ updatedAt }}" -->
+        {% when "pushedAt" %}
+          {% assign pushedAt = value %}
+          <!-- pushedAt = "{{ pushedAt }}" -->
+        {% when "homepage" %}
+          {% assign homepage = value %}
+          <!-- homepage = "{{ homepage }}" -->
+        {% when "archived" %}
+          {% assign archived = value %}
+          <!-- archived = "{{ archived }}" -->
+        {% when "topics" %}
+          {% assign topics = value %}
+          <!-- topics = "{{ topics }}" -->
       {% endcase %}
       {% assign chars = line | split: '' %}
-      <!-- "{{ line }}" "{{ chars | first }}" "{{ chars | last }}" -->
-      {% if chars | first == '[' and chars | last == ']' %}
+      {% assing firstChat = chars | first %}
+      {% assing lastChat = chars | last %}
+      <!-- "{{ line }}" "{{ firstChat }}" "{{ lastChat }}" "{{ firstChat == '[' }}" "{{ lastChat == ']' }}" -->
+      {% if firstChat == '[' and lastChat == ']' %}
+        {% assign value = pair | last %}
         <a href="{{ path }}">{{ path }}</a>
         {% assign path = empty %}
         {% assign url = empty %}
