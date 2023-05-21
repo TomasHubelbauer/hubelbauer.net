@@ -13,13 +13,13 @@
 [submodule "git-dot-ds_store-global-ignore"]
 	path = git-dot-ds_store-global-ignore
 	url = https://github.com/TomasHubelbauer/git-dot-ds_store-global-ignore
-	description = 
+	description = Information on how to hide the infamous .DS_Store macOS file using the global Git ignore configuration option.
 	created-at = 2023-05-21T17:06:24Z
-	updated-at = 2023-05-21T17:06:24Z
+	updated-at = 2023-05-21T19:23:43Z
 	pushed-at = 2023-05-21T17:07:07Z
 	homepage = 
 	archived = false
-	topics = 
+	topics = dsstore,git,git-ignore,macos
 	title = Git `.DS_Store` Global Ignore
 
 [submodule "podman"]
