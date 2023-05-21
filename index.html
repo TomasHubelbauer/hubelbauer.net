@@ -13,36 +13,36 @@
   </head>
   <body>
     <h1>Tomas Hubelbauer</h1>
-    {% capture text %}{% include_relative .gitmodules %}{% endcapture %}
-    {% assign lines = text | newline_to_br | strip_newlines | split: '<br />' | reverse %}
-    {% for rawLine in lines %}
-      {% assign line = rawLine | strip %}
-      {% assign pair = line | split: ' = ' %}
-      {% assign key = pair | first %}
-      {% assign value = pair | last %}
-      {% case key %}
-        {% when "path" %}
-          {% assign path = value %}
-        {% when "url" %}
-          {% assign url = value %}
-        {% when "title" %}
-          {% assign title = value %}
-        {% when "description" %}
-          {% assign description = value %}
-        {% when "created-at" %}
-          {% assign createdAt = value %}
-        {% when "updated-at" %}
-          {% assign updatedAt = value %}
-        {% when "pushed-at" %}
-          {% assign pushedAt = value %}
-        {% when "homepage" %}
-          {% assign homepage = value %}
-        {% when "archived" %}
-          {% assign archived = value %}
-        {% when "topics" %}
-          {% assign topics = value | split: ',' %}
-      {% endcase %}
-      {% assign maybeSubmodule = line | slice: 1, 9 %}
+    {%- capture text -%}{%- include_relative .gitmodules -%}{%- endcapture -%}
+    {%- assign lines = text | newline_to_br | strip_newlines | split: '<br />' | reverse -%}
+    {%- for rawLine in lines -%}
+      {%- assign line = rawLine | strip -%}
+      {%- assign pair = line | split: ' = ' -%}
+      {%- assign key = pair | first -%}
+      {%- assign value = pair | last -%}
+      {%- case key -%}
+        {%- when "path" -%}
+          {%- assign path = value -%}
+        {%- when "url" -%}
+          {%- assign url = value -%}
+        {%- when "title" -%}
+          {%- assign title = value -%}
+        {%- when "description" -%}
+          {%- assign description = value -%}
+        {%- when "created-at" -%}
+          {%- assign createdAt = value -%}
+        {%- when "updated-at" -%}
+          {%- assign updatedAt = value -%}
+        {%- when "pushed-at" -%}
+          {%- assign pushedAt = value -%}
+        {%- when "homepage" -%}
+          {%- assign homepage = value -%}
+        {%- when "archived" -%}
+          {%- assign archived = value -%}
+        {%- when "topics" -%}
+          {%- assign topics = value | split: ',' -%}
+      {%- endcase -%}
+      {%- assign maybeSubmodule = line | slice: 1, 9 -%}
       {% if maybeSubmodule == 'submodule' %}
         <div class="card">
           <a href="{{ path }}">
@@ -62,18 +62,18 @@
             </a>
           </div>
         </div>
-        {% assign path = empty %}
-        {% assign url = empty %}
-        {% assign title = empty %}
-        {% assign description = empty %}
-        {% assign createdAt = empty %}
-        {% assign updatedAt = empty %}
-        {% assign pushedAt = empty %}
-        {% assign homepage = empty %}
-        {% assign archived = empty %}
-        {% assign topics = empty %}
-      {% endif %}
-    {% endfor %}
+        {%- assign path = empty -%}
+        {%- assign url = empty -%}
+        {%- assign title = empty -%}
+        {%- assign description = empty -%}
+        {%- assign createdAt = empty -%}
+        {%- assign updatedAt = empty -%}
+        {%- assign pushedAt = empty -%}
+        {%- assign homepage = empty -%}
+        {%- assign archived = empty -%}
+        {%- assign topics = empty -%}
+      {%- endif -%}
+    {%- endfor -%}
     <hr />
     <a href="https://github.com/TomasHubelbauer/hubelbauer.net" target="_blank" title="hubelbauer.net source code">
       <img src="https://github.com/favicon.ico" />
