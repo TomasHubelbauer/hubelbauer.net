@@ -26,7 +26,12 @@
       {% assign pair = line | split: ' = ' %}
       {% assign key = pair | first %}
       {% assign value = pair | last %}
-      {% # Skip lines that are not key value pairs (have no ' = ') %}
+      {% comment %}
+      Note that GitHub Pages uses Liquid 4.0.4 which doesn't support inline
+      comments which were introduced in Liquid 5.0.4:
+      - https://pages.github.com/versions (see "liquid: 4.0.4")
+      - https://shopify.github.io/liquid/tags/template#inline-comments
+      {% comment %} Skip lines that are not key value pairs (have no ' = ') {% endcomment %}
       {% unless key == value %}
         <!-- "{{ key }}": "{{ value }}" -->
         {% if key == 'path' %}
