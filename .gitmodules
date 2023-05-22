@@ -33,3 +33,7 @@
 	archived = false
 	topics = fatcow,fatcow-icons,icon-pack,icon-set,icons
 	title = FatCow Icons
+
+[submodule "open-source-encore-2023-05-22"]
+	path = open-source-encore-2023-05-22
+	url = https://github.com/TomasHubelbauer/open-source-encore-2023-05-22
