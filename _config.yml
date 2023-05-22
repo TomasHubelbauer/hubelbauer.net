@@ -1,2 +1,9 @@
+# Make `.gitmodules` a part of the Jekyll build
+# It is a dotfile and as such is ignored by the default exclusion list.
+# We use `.gitmodules` to populate `index.html` via Liquid's `include_relative`.
 include: ['.gitmodules']
+
+# Force submodules' READMEs to be used as the page content when on the page URL
+# By default `index.html` beats `README.md` and if the submodule also had GitHub
+# Pages set up, their `index.html` would beat the README which this fixes.
 exclude: ['*/index.html']
