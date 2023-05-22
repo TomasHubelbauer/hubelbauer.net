@@ -38,10 +38,10 @@
 	path = open-source-encore-2023-05-22
 	url = https://github.com/TomasHubelbauer/open-source-encore-2023-05-22
 	title = Open Source Encore: Playwright `test.only` with `forbidOnly` error message improvement
-	description = 
+	description = Open Source Encore post about my Playwright test runner forbidOnly mode error message improvement contribution
 	created-at = 2023-05-22T19:57:30Z
-	updated-at = 2023-05-22T19:57:40Z
+	updated-at = 2023-05-22T20:23:12Z
 	pushed-at = 2023-05-22T20:13:15Z
-	homepage = 
+	homepage = https://hubelbauer.net/open-source-encore-2023-05-22
 	archived = false
-	topics = 
+	topics = open-source,open-source-encore,playwright
