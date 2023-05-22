@@ -63,9 +63,10 @@
             <a href="{{ url }}" target="_blank" title="{{ path }} source code on GitHub">
               🗄️
             </a>
-            {%- assign antiUrl = 'https://hubelbauer.net/' | append: path | append: '/' -%}
+            {%- assign antiUrlNoSlash = 'https://hubelbauer.net/' | append: path -%}
+            {%- assign antiUrlSlash = 'https://hubelbauer.net/' | append: path | append: '/' -%}
             <!-- "{{ antiUrl }}" -->
-            {%- if homepage != empty and homepage != antiUrl %}
+            {%- if homepage != empty and homepage != antiUrlNoSlash and homepage != antiUrlSlash %}
               <a href="{{ homepage }}" target="_blank" title="{{ path }} GitHub Pages web site">
                 🌍
               </a>
