@@ -49,3 +49,11 @@
 [submodule "open-source-encore-2023-05-23-vs-code"]
 	path = open-source-encore-2023-05-23-vs-code
 	url = https://github.com/TomasHubelbauer/open-source-encore-2023-05-23-vs-code
+	title = Open Source Encore: VS Code create path while renaming with `/`
+	description = 
+	created-at = 2023-05-23T17:01:36Z
+	updated-at = 2023-05-23T17:01:37Z
+	pushed-at = 2023-05-23T17:54:00Z
+	homepage = 
+	archived = false
+	topics = 
