@@ -50,10 +50,10 @@
 	path = open-source-encore-2023-05-23-vs-code
 	url = https://github.com/TomasHubelbauer/open-source-encore-2023-05-23-vs-code
 	title = Open Source Encore: VS Code create path while renaming with `/`
-	description = 
+	description = A post about my investigation into how to add a VS Code feature I\\'ve so desired it already had for a long time.
 	created-at = 2023-05-23T17:01:36Z
-	updated-at = 2023-05-23T17:01:37Z
+	updated-at = 2023-05-23T17:56:33Z
 	pushed-at = 2023-05-23T17:54:00Z
-	homepage = 
+	homepage = https://hubelbauer.net/open-source-encore-2023-05-23-vs-code
 	archived = false
-	topics = 
+	topics = open-source,vs-code,vscode
