@@ -45,3 +45,7 @@
 	homepage = https://hubelbauer.net/open-source-encore-2023-05-22
 	archived = false
 	topics = open-source,open-source-encore,playwright
+
+[submodule "open-source-encore-2023-05-23-vs-code"]
+	path = open-source-encore-2023-05-23-vs-code
+	url = https://github.com/TomasHubelbauer/open-source-encore-2023-05-23-vs-code
