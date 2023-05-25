@@ -57,3 +57,7 @@
 	homepage = https://hubelbauer.net/open-source-encore-2023-05-23-vs-code
 	archived = false
 	topics = open-source,vs-code,vscode
+
+[submodule "open-source-encore-2023-05-25-liquid-js"]
+	path = open-source-encore-2023-05-25-liquid-js
+	url = https://github.com/TomasHubelbauer/open-source-encore-2023-05-25-liquid-js
