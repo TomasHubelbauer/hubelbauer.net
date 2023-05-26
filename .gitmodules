@@ -61,11 +61,11 @@
 [submodule "open-source-encore-2023-05-25-liquid-js"]
 	path = open-source-encore-2023-05-25-liquid-js
 	url = https://github.com/TomasHubelbauer/open-source-encore-2023-05-25-liquid-js
-	title = Open Source Encore: LiquidJS
+	title = Open Source Encore: LiquidJS Jekyll filter support improvement contributions
 	description = A post about my contributions to LiquidJS and a little bit about how I built my site, hubelbauer.net
 	created-at = 2023-05-25T19:58:06Z
 	updated-at = 2023-05-25T20:32:20Z
-	pushed-at = 2023-05-25T20:42:06Z
+	pushed-at = 2023-05-26T15:57:00Z
 	homepage = https://hubelbauer.net/open-source-encore-2023-05-25-liquid-js
 	archived = false
 	topics = github-pages,jekyll,liquid,liquidjs,open-source,open-source-encore
