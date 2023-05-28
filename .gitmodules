@@ -85,3 +85,11 @@
 [submodule "open-source-encore-2023-05-28-websaver"]
 	path = open-source-encore-2023-05-28-websaver
 	url = https://github.com/TomasHubelbauer/open-source-encore-2023-05-28-websaver
+	title = Open Source Encore: WebSaver
+	description = My attempts at improving the user-friendliness of WebSaver and getting it to work for my needs.
+	created-at = 2023-05-28T16:02:40Z
+	updated-at = 2023-05-28T16:25:26Z
+	pushed-at = 2023-05-28T16:24:31Z
+	homepage = https://hubelbauer.net/open-source-encore-2023-05-28-websaver
+	archived = false
+	topics = mac-os,macos,objective-c,open-source,open-source-encore,screen-saver,xcode
