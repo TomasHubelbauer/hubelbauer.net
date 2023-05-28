@@ -93,3 +93,7 @@
 	homepage = https://hubelbauer.net/open-source-encore-2023-05-28-websaver
 	archived = false
 	topics = mac-os,macos,objective-c,open-source,open-source-encore,screen-saver,xcode
+
+[submodule "open-source-encore-2023-05-28-liquid-js"]
+	path = open-source-encore-2023-05-28-liquid-js
+	url = https://github.com/TomasHubelbauer/open-source-encore-2023-05-28-liquid-js
