@@ -81,3 +81,7 @@
 	homepage = https://hubelbauer.net/open-source-encore-2023-05-28-jekyll-readme-index
 	archived = false
 	topics = github,github-pages,jekyll,open-source,readme,ruby
+
+[submodule "open-source-encore-2023-05-28-websaver"]
+	path = open-source-encore-2023-05-28-websaver
+	url = https://github.com/TomasHubelbauer/open-source-encore-2023-05-28-websaver
