@@ -73,3 +73,11 @@
 [submodule "open-source-encore-2023-05-28-jekyll-readme-index"]
 	path = open-source-encore-2023-05-28-jekyll-readme-index
 	url = https://github.com/TomasHubelbauer/open-source-encore-2023-05-28-jekyll-readme-index
+	title = Open Source Encore: `jekyll-readme-index` support for configurable regex
+	description = My contribution to the jekyll-readme-index Jekyll plugin that ships with GitHub Pages out of the box.
+	created-at = 2023-05-28T13:58:47Z
+	updated-at = 2023-05-28T14:14:42Z
+	pushed-at = 2023-05-28T14:13:43Z
+	homepage = https://hubelbauer.net/open-source-encore-2023-05-28-jekyll-readme-index
+	archived = false
+	topics = github,github-pages,jekyll,open-source,readme,ruby
