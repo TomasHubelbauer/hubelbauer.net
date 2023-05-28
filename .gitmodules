@@ -105,3 +105,7 @@
 	homepage = https://hubelbauer.net/open-source-encore-2023-05-28-liquid-js
 	archived = false
 	topics = github-pages,jekyll,liquid,liquid-js,open-source,open-source-encore
+
+[submodule "supabase-studio-filter-non-empty-array"]
+	path = supabase-studio-filter-non-empty-array
+	url = https://github.com/TomasHubelbauer/supabase-studio-filter-non-empty-array
