@@ -109,3 +109,11 @@
 [submodule "supabase-studio-filter-non-empty-array"]
 	path = supabase-studio-filter-non-empty-array
 	url = https://github.com/TomasHubelbauer/supabase-studio-filter-non-empty-array
+	title = Supabase Studio filter non-empty array
+	description = A note on how to filter non-empty array in Supabase Studio
+	created-at = 2023-05-28T20:05:37Z
+	updated-at = 2023-05-28T20:15:50Z
+	pushed-at = 2023-05-28T20:14:39Z
+	homepage = https://hubelbauer.net/supabase-studio-filter-non-empty-array
+	archived = false
+	topics = postgres,supabase,supabase-studio
