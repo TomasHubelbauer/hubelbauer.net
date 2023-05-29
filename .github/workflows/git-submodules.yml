@@ -10,7 +10,13 @@ jobs:
   git-submodules:
     runs-on: ubuntu-latest
     steps:
+      - name: Run the scan script
+        run: node .github/workflows/git-modules/scan.js
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      
       - name: Sync .gitmodules changes with Git Modules
         uses: TomasHubelbauer/github-action-auto-git-modules@main
+      
       - name: Run the lint script
-        run: node .github/workflows/git-submodules.js
+        run: node .github/workflows/git-modules/lint.js
