@@ -1,4 +1,4 @@
-import parseModules from "./parseModules";
+import parseModules from './parseModules.js';
 
 const modules = await parseModules();
 
