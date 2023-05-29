@@ -27,11 +27,11 @@
 	url = https://github.com/TomasHubelbauer/fatcow-icons
 	description = FatCow icons v3.9.2 (I was given a permission to host these on GitHub by FatCow support.)
 	created-at = 2019-06-08T09:17:01Z
-	updated-at = 2023-05-09T07:40:11Z
+	updated-at = 2023-05-29T21:45:13Z
 	pushed-at = 2023-05-21T21:17:49Z
 	homepage = https://tomashubelbauer.github.io/fatcow-icons
 	archived = false
-	topics = fatcow,fatcow-icons,icon-pack,icon-set,icons
+	topics = fatcow,fatcow-icons,hubelbauer-net,icon-pack,icon-set,icons
 	title = FatCow Icons
 
 [submodule "open-source-encore-2023-05-22"]
