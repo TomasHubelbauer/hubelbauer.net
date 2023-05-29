@@ -49,7 +49,7 @@
       {% if maybeSubmodule == 'submodule' %}
         <div class="card">
           <a href="{{ path }}">
-            <strong>{{ title }}</strong>
+            <strong>{{ title | markdownify }}</strong>
             {%- if description != empty %}
               <div>
                 {{ description }}
