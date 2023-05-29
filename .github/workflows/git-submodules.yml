@@ -3,6 +3,8 @@ on:
   push:
     paths:
       - .gitmodules
+      - .github/workflows/git-submodules.yml
+      - .github/workflows/git-submodules/
   workflow_dispatch:
   schedule:
     - cron: '0 * * * *'
@@ -10,8 +12,11 @@ jobs:
   git-submodules:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout the repository to have the workflow scripts available
+        uses: actions/checkout@v3
+
       - name: Run the scan script
-        run: node .github/workflows/git-modules/scan.js
+        run: node .github/workflows/git-submodules/scan.js
         env:
           GITHUB_TOKEN: ${{ github.token }}
       
@@ -19,4 +24,4 @@ jobs:
         uses: TomasHubelbauer/github-action-auto-git-modules@main
       
       - name: Run the lint script
-        run: node .github/workflows/git-modules/lint.js
+        run: node .github/workflows/git-submodules/lint.js
