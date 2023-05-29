@@ -118,4 +118,14 @@
 	archived = false
 	topics = postgres,supabase,supabase-studio
 
-#+ https://github.com/TomasHubelbauer/github-token-edit-another-repo
+[submodule "github-token-edit-another-repo"]
+	path = github-token-edit-another-repo
+	url = https://github.com/TomasHubelbauer/github-token-edit-another-repo
+	title = `GITHUB_TOKEN` edit another repository
+	description = An experiment to see if the GitHub Actions integration PAT can edit repository metadata
+	created-at = 2023-05-29T20:25:39Z
+	updated-at = 2023-05-29T20:57:00Z
+	pushed-at = 2023-05-29T20:56:21Z
+	homepage = https://hubelbauer.net/github-token-edit-another-repo
+	archived = false
+	topics = github-actions,github-api,github-token
