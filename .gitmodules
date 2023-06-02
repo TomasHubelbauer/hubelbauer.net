@@ -133,3 +133,11 @@
 [submodule "open-source-encore-2023-05-30-jekyll"]
 	path = open-source-encore-2023-05-30-jekyll
 	url = https://github.com/TomasHubelbauer/open-source-encore-2023-05-30-jekyll
+	title = Open Source Encore: Jekyll documentation improvements for Include/Exclude
+	description = An account of my contribution to the Jekyll project documentation to clarify the Exclude and Include configuration options\\' behavior.
+	created-at = 2023-06-02T20:12:53Z
+	updated-at = 2023-06-02T20:43:19Z
+	pushed-at = 2023-06-02T20:42:19Z
+	homepage = https://hubelbauer.net/open-source-encore-2023-05-30-jekyll
+	archived = false
+	topics = config-yml,jekyll,open-source,open-source-encore,ruby
