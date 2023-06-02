@@ -130,4 +130,6 @@
 	archived = false
 	topics = github-actions,github-api,github-token
 
-#+ https://github.com/TomasHubelbauer/open-source-encore-2023-05-30-jekyll
+[submodule "open-source-encore-2023-05-30-jekyll"]
+	path = open-source-encore-2023-05-30-jekyll
+	url = https://github.com/TomasHubelbauer/open-source-encore-2023-05-30-jekyll
