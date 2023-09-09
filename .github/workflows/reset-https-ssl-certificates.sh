@@ -54,7 +54,7 @@ done <<< "$RAW"
 # Drop the triailing newlines in the output to be comparable to the pattern
 OUTPUT=$(echo "$OUTPUT" | sed -Ez '$ s/\n+$//')
 
-echo "$OUTPUT" > .github/workflows/http-ssl-certificates.txt
+echo "$OUTPUT" > .github/https-ssl-certificates.txt
 cat .github/workflows/http-ssl-certificates.txt
 git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 git config --global user.name "github-actions[bot]"

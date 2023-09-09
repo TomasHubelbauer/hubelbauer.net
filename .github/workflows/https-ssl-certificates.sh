@@ -2,7 +2,7 @@
 # whether it has run on the pipeline agent or my Mac, but it always gives the
 # same output on the same machine
 # Note we're dropping the trailing newlines from both the pattern and the output
-PATTERN=$(cat .github/workflows/https-ssl-certificates.txt | sed -Ez '$ s/\n+$//')
+PATTERN=$(cat .github/https-ssl-certificates.txt | sed -Ez '$ s/\n+$//')
 
 # Send the `echo` to `openssl s_client`` otherwise it will wait for user input
 # Remove `SSL-Session` section items as they vary across runs and are irrelevant
