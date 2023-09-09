@@ -56,5 +56,13 @@ OUTPUT=$(echo "$OUTPUT" | sed -Ez '$ s/\n+$//')
 
 echo "$OUTPUT" > .github/workflows/http-ssl-certificates.txt
 cat .github/workflows/http-ssl-certificates.txt
-pwd
+git add .github/workflows/http-ssl-certificates.txt
 git status
+
+if git diff-index --quiet HEAD --; then
+  exit
+fi
+
+git commit -m "Update the HTTPS SSL certificates" -m "This is a generated commit"
+git pull --rebase
+git push
