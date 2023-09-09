@@ -5,6 +5,8 @@ on:
       - .github/workflows/reset-https-ssl-certificates.yml
       - .github/workflows/reset-https-ssl-certificates.sh
   workflow_dispatch:
+permissions:
+  actions: write
 jobs:
   run-script:
     runs-on: ubuntu-latest
