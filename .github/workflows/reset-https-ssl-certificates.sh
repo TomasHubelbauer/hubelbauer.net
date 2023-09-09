@@ -56,6 +56,8 @@ OUTPUT=$(echo "$OUTPUT" | sed -Ez '$ s/\n+$//')
 
 echo "$OUTPUT" > .github/workflows/http-ssl-certificates.txt
 cat .github/workflows/http-ssl-certificates.txt
+git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+git config --global user.name "github-actions[bot]"
 git add .github/workflows/http-ssl-certificates.txt
 git status
 
