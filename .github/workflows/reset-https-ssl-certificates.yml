@@ -1,0 +1,11 @@
+name: reset-https-ssl-certificates
+on:
+  workflow_dispatch:
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the source code to get the shell scripts
+        uses: actions/checkout@v3
+      - name: Reset hubelbauer.net:443 SSL certificates
+        run: .github/workflows/reset-https-ssl-certificates.sh
