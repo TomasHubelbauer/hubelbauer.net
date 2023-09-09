@@ -1,5 +1,9 @@
 name: reset-https-ssl-certificates
 on:
+  push:
+    paths:
+      - .github/workflows/reset-https-ssl-certificates.yml
+      - .github/workflows/reset-https-ssl-certificates.sh
   workflow_dispatch:
 jobs:
   run-script:
