@@ -1,3 +1,15 @@
+[submodule "cursor-agent-windows"]
+	path = cursor-agent-windows
+	url = https://github.com/TomasHubelbauer/cursor-agent-windows
+	description = A post showing how I made a Windows version of Cursor Agent despite no official Windows-native builds.
+	created-at = 2025-08-15T09:40:00Z
+	updated-at = 2025-08-15T09:40:00Z
+	pushed-at = 2025-08-15T09:40:00Z
+	homepage = https://hubelbauer.net/cursor-agent-windows/
+	archived = false
+	topics = cursor-agent
+	title = Cursor Agent Windows
+
 [submodule "git-dot-ds_store-global-ignore"]
 	path = git-dot-ds_store-global-ignore
 	url = https://github.com/TomasHubelbauer/git-dot-ds_store-global-ignore
