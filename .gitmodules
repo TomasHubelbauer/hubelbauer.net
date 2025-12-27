@@ -1,13 +1,13 @@
 [submodule "cursor-agent-windows"]
 	path = cursor-agent-windows
 	url = https://github.com/TomasHubelbauer/cursor-agent-windows
-	description = 
+	description = A post showing how I made a Windows version of Cursor Agent despite no official Windows-native builds.
 	created-at = 2025-08-15T09:08:23Z
-	updated-at = 2025-10-10T13:05:03Z
+	updated-at = 2025-12-27T20:42:21Z
 	pushed-at = 2025-08-15T09:55:15Z
-	homepage = 
+	homepage = https://hubelbauer.net/cursor-agent-windows/
 	archived = false
-	topics = 
+	topics = cursor,cursor-agent,hubelbauer-net,windows
 	title = Hacking Cursor Agent to run on Windows
 
 [submodule "git-dot-ds_store-global-ignore"]
