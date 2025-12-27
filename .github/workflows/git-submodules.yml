@@ -23,6 +23,16 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
 
+      - name: Commit and push scan results
+        run: |
+          if [ -f .git/commit-message.txt ]; then
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git config user.name "github-actions[bot]"
+            git add .gitmodules
+            git commit -m "$(cat .git/commit-message.txt)" || true
+            git push
+          fi
+
       - name: Sync .gitmodules changes with Git Modules
         uses: TomasHubelbauer/github-action-auto-git-modules@main
 
