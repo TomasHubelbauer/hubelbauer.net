@@ -1,55 +1,38 @@
-import fs from 'fs';
+type Module = {
+  name: string;
+  path: string;
+  url: URL | undefined;
+  title: string | undefined;
+  description: string | undefined;
+  createdAt: Date | undefined;
+  updatedAt: Date | undefined;
+  pushedAt: Date | undefined;
+  homepage: URL | undefined;
+  archived: boolean | undefined;
+  topics: string[];
+};
 
 export default async function parseModules() {
-  /** @type {string} */
-  let text;
-
-  try {
-    text = await fs.promises.readFile('.gitmodules', 'utf-8');
-  }
-  catch (error) {
-    if (error.code === 'ENOENT' || error.code === 'EACCES') {
-      process.exit(0);
-    }
-
-    throw error;
+  const file = Bun.file('.gitmodules');
+  if (!await file.exists()) {
+    process.exit(0);
   }
 
-  /** @type {string} */
-  let name;
+  const text = await file.text();
 
-  /** @type {string} */
-  let path;
+  let name: string | undefined;
+  let path: string | undefined;
+  let url: URL | undefined;
+  let title: string | undefined;
+  let description: string | undefined;
+  let createdAt: Date | undefined;
+  let updatedAt: Date | undefined;
+  let pushedAt: Date | undefined;
+  let homepage: URL | undefined;
+  let archived: boolean | undefined;
+  let topics: string[] | undefined;
 
-  /** @type {URL} */
-  let url;
-
-  /** @type {string} */
-  let title;
-
-  /** @type {string} */
-  let description;
-
-  /** @type {Date} */
-  let createdAt;
-
-  /** @type {Date} */
-  let updatedAt;
-
-  /** @type {Date} */
-  let pushedAt;
-
-  /** @type {URL} */
-  let homepage;
-
-  /** @type {boolean} */
-  let archived;
-
-  /** @type {string[]} */
-  let topics;
-
-  /** @type {{ name: string; path: string; url: URL; title: string; description: string; createdAt: Date; updatedAt: Date; pushedAt: Date; archived: boolean; topics: string[]; }} */
-  const modules = [];
+  const modules: Module[] = [];
   const lines = text.split('\n').reverse();
   for (const line of lines) {
     if (!line) {
@@ -59,7 +42,19 @@ export default async function parseModules() {
     if (line.startsWith('[submodule "') && line.endsWith('"]')) {
       name = line.slice('[submodule "'.length, -'"]'.length);
 
-      modules.push({ name, path, url, title, description, createdAt, updatedAt, pushedAt, homepage, archived, topics });
+      modules.push({
+        name,
+        path: path!,
+        url,
+        title,
+        description,
+        createdAt,
+        updatedAt,
+        pushedAt,
+        homepage,
+        archived,
+        topics: topics ?? []
+      });
 
       name = undefined;
       path = undefined;

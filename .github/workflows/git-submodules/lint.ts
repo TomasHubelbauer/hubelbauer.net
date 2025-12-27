@@ -1,9 +1,8 @@
-import parseModules from './parseModules.js';
+import parseModules from './parseModules.ts';
 
 const modules = await parseModules();
 
-/** @type {string} */
-const errors = [];
+const errors: string[] = [];
 for (const module of modules) {
   if (module.name !== module.path) {
     errors.push(`Module "${module.name}" has a different name and path.`);
