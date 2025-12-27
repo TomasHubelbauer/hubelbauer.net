@@ -154,4 +154,14 @@
 	archived = false
 	topics = config-yml,jekyll,open-source,open-source-encore,ruby
 
-#+ https://github.com/TomasHubelbauer/vscode-local-extensions
+[submodule "vscode-local-extensions"]
+	path = vscode-local-extensions
+	url = https://github.com/TomasHubelbauer/vscode-local-extensions
+	title = VS Code Local Extensions
+	description = An article about VS Code Local Workspace Extensions feature
+	created-at = 2025-12-27T20:49:22Z
+	updated-at = 2025-12-27T21:04:10Z
+	pushed-at = 2025-12-27T21:02:45Z
+	homepage = 
+	archived = false
+	topics = hubelbauer-net,vscode,vscode-extensions
