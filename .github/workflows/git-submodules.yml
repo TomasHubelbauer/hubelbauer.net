@@ -30,6 +30,7 @@ jobs:
             git config user.name "github-actions[bot]"
             git add .gitmodules
             git commit -m "$(cat .git/commit-message.txt)" || true
+            git pull --rebase
             git push
           fi
 
