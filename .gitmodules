@@ -1,14 +1,14 @@
 [submodule "cursor-agent-windows"]
 	path = cursor-agent-windows
 	url = https://github.com/TomasHubelbauer/cursor-agent-windows
-	description = A post showing how I made a Windows version of Cursor Agent despite no official Windows-native builds.
-	created-at = 2025-08-15T09:40:00Z
-	updated-at = 2025-08-15T09:40:00Z
-	pushed-at = 2025-08-15T09:40:00Z
-	homepage = https://hubelbauer.net/cursor-agent-windows/
+	description = 
+	created-at = 2025-08-15T09:08:23Z
+	updated-at = 2025-10-10T13:05:03Z
+	pushed-at = 2025-08-15T09:55:15Z
+	homepage = 
 	archived = false
-	topics = cursor-agent
-	title = Cursor Agent Windows
+	topics = 
+	title = Hacking Cursor Agent to run on Windows
 
 [submodule "git-dot-ds_store-global-ignore"]
 	path = git-dot-ds_store-global-ignore
@@ -39,7 +39,7 @@
 	url = https://github.com/TomasHubelbauer/fatcow-icons
 	description = FatCow icons v3.9.2 (I was given a permission to host these on GitHub by FatCow support.)
 	created-at = 2019-06-08T09:17:01Z
-	updated-at = 2023-08-28T19:39:17Z
+	updated-at = 2025-06-07T20:07:44Z
 	pushed-at = 2023-05-21T21:17:49Z
 	homepage = https://tomashubelbauer.github.io/fatcow-icons
 	archived = false
