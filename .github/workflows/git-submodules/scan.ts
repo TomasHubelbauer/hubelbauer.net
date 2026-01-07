@@ -25,8 +25,11 @@ do {
       page,
     { headers }
   );
-  const data = (await response.json()) as Repository[];
-  repositories.push(...data);
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(`GitHub API error: ${response.status} ${JSON.stringify(data)}`);
+  }
+  repositories.push(...(data as Repository[]));
 
   console.log(`Fetched page ${page} and got ${data.length} repositories.`);
   if (data.length < 100) {
